@@ -16,7 +16,7 @@ DeepSeek Harness（DSH）Web 客户端「写作」面板：为长篇网文创作
 ```bash
 npm install dsh-client-ui-writing
 # 或
-dsh plugin add dsh-client-ui-writing
+dsh plugin --profile web add dsh-client-ui-writing
 ```
 
 peerDependencies：`react@^18.2.0`、`@deepseek-ai/dsh-client-runtime`、`@deepseek-ai/dsh-client-ui-slots`（官方包走 peer，不内嵌）。

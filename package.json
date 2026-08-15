@@ -1,6 +1,6 @@
 {
   "name": "dsh-client-ui-writing",
-  "version": "0.3.1",
+  "version": "0.4.0",
   "description": "Client-side writing panel for the DeepSeek Harness: project volumes, library, search, and evolution tab with inline version-chain diff and SVG thread graph.",
   "keywords": [
     "deepseek-harness",

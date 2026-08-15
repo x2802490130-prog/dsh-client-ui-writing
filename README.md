@@ -1,23 +1,20 @@
 # dsh-client-ui-writing
 
+[![npm version](https://img.shields.io/npm/v/dsh-client-ui-writing)](https://www.npmjs.com/package/dsh-client-ui-writing)  [![license](https://img.shields.io/npm/l/dsh-client-ui-writing)](https://github.com/x2802490130-prog/dsh-client-ui-writing/blob/main/LICENSE)
+
 DeepSeek Harness（DSH）Web 客户端的「写作」工作台：为长篇网文创作提供侧边栏写作面板 + 会话内全书索引视图。是三件套的前端——引擎本体是 [dsh-tool-writing](https://github.com/x2802490130-prog/dsh-tool-writing)，host 侧数据通道是 [dsh-writing-remote](https://github.com/x2802490130-prog/dsh-writing-remote)。
 
 ## 三件套分工
 
-```
-┌─ dsh-client-ui-writing（本包，浏览器）──┐
-│  侧边栏面板 · 会话内索引视图 · 快捷键      │
-└──────────────┬─────────────────────────┘
-               │ Typert remote（只读 + 编排触发）
-┌──────────────▼─────────────────────────┐
-│ dsh-writing-remote（host）              │
-│  项目/书库/检索/演化/线索 数据服务        │
-└──────────────┬─────────────────────────┘
-               │
-┌──────────────▼─────────────────────────┐
-│ dsh-tool-writing（host）                │
-│  写文引擎：生成/检索/书库/编排            │
-└────────────────────────────────────────┘
+```text
+🖥️  dsh-client-ui-writing —— 浏览器侧（本包）
+　　 侧边栏写作面板 · 会话内索引视图 · 快捷键总线
+　　　　↓ Typert remote（只读 + 编排触发）
+📡  dsh-writing-remote —— host 侧数据服务
+　　 项目 / 书库 / 检索 / 演化 / 线索
+　　　　↓
+✍️  dsh-tool-writing —— host 侧写文引擎
+　　 生成 / 检索 / 书库 / 编排
 ```
 
 面板**只读数据 + 触发编排**，不直接生成正文；所有重活都在 host 侧由引擎完成。

@@ -1,0 +1,4 @@
+# Writing panel bundle patch: mounts the client writing panel.
+- insert:
+    - id: ui-writing
+      name: 'dsh-client-ui-writing'

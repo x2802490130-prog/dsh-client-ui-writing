@@ -1,0 +1,50 @@
+{
+  "name": "dsh-client-ui-writing",
+  "version": "0.3.0",
+  "description": "Client-side writing panel for the DeepSeek Harness: project volumes, library, search, and evolution tab with inline version-chain diff and SVG thread graph.",
+  "keywords": [
+    "deepseek-harness",
+    "client-plugin",
+    "panel",
+    "svg-graph"
+  ],
+  "type": "module",
+  "main": "lib/index.js",
+  "exports": {
+    ".": "./lib/index.js",
+    "./client": "./lib/client.js",
+    "./package.json": "./package.json"
+  },
+  "files": [
+    "lib",
+    "cordis.patch.yml",
+    "README.md",
+    "LICENSE"
+  ],
+  "license": "MIT",
+  "dsh": {
+    "bundle": {
+      "patch": "./cordis.patch.yml"
+    },
+    "client": {
+      "inject": [
+        "@deepseek-ai/dsh-client-runtime",
+        "@deepseek-ai/dsh-client-ui-sidebar"
+      ],
+      "platform": "web"
+    }
+  },
+  "peerDependencies": {
+    "react": "^18.2.0",
+    "@deepseek-ai/cordis": "^4.0.1",
+    "@deepseek-ai/dsh-client-runtime": "^0.1.0-rc.6",
+    "@deepseek-ai/dsh-client-ui-slots": "^0.1.0-rc.6"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/x2802490130-prog/dsh-client-ui-writing"
+  },
+  "bugs": {
+    "url": "https://github.com/x2802490130-prog/dsh-client-ui-writing/issues"
+  }
+}
